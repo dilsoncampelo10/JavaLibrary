@@ -4,7 +4,7 @@
  */
 package javalibrary.views;
 
-import javalibrary.views.book.CreateBook;
+import javalibrary.views.book.*;
 
 /**
  *
@@ -37,6 +37,7 @@ public class HomeView extends javax.swing.JFrame {
         bookRegister = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        bookFindAll = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
@@ -50,7 +51,7 @@ public class HomeView extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         container.setBackground(new java.awt.Color(102, 204, 255));
-        container.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        container.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout containerLayout = new javax.swing.GroupLayout(container);
         container.setLayout(containerLayout);
@@ -98,6 +99,15 @@ public class HomeView extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Consultas");
+
+        bookFindAll.setText("Livros");
+        bookFindAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bookFindAllActionPerformed(evt);
+            }
+        });
+        jMenu3.add(bookFindAll);
+
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Gerar relatórios");
@@ -128,6 +138,11 @@ public class HomeView extends javax.swing.JFrame {
         this.dispose();
         new CreateBook().setVisible(true);
     }//GEN-LAST:event_bookRegisterActionPerformed
+
+    private void bookFindAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookFindAllActionPerformed
+        this.dispose();
+        new IndexBook().setVisible(true);
+    }//GEN-LAST:event_bookFindAllActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,6 +180,7 @@ public class HomeView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem bookFindAll;
     private javax.swing.JMenuItem bookRegister;
     private javax.swing.JPanel container;
     private javax.swing.JPanel container2;

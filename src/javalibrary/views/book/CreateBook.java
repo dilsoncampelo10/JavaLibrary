@@ -42,6 +42,7 @@ public class CreateBook extends javax.swing.JFrame {
         priceField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         saveBtn = new javax.swing.JButton();
+        btnFindAll = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -95,6 +96,16 @@ public class CreateBook extends javax.swing.JFrame {
             }
         });
 
+        btnFindAll.setBackground(new java.awt.Color(255, 102, 102));
+        btnFindAll.setForeground(new java.awt.Color(255, 255, 255));
+        btnFindAll.setText("Livros cadastrados");
+        btnFindAll.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnFindAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFindAllActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -118,7 +129,10 @@ public class CreateBook extends javax.swing.JFrame {
                                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(priceField, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel4)))
-                                .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btnFindAll, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jLabel3)))
                         .addContainerGap(15, Short.MAX_VALUE))))
         );
@@ -144,7 +158,9 @@ public class CreateBook extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(descriptionField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFindAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(47, 47, 47))
         );
 
@@ -176,6 +192,11 @@ public class CreateBook extends javax.swing.JFrame {
         BookDAO bookDAO = new BookDAO();
         bookDAO.create(book);
     }//GEN-LAST:event_saveBtnActionPerformed
+
+    private void btnFindAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindAllActionPerformed
+        this.dispose();
+        new IndexBook().setVisible(true);
+    }//GEN-LAST:event_btnFindAllActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,6 +236,7 @@ public class CreateBook extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField authorField;
+    private javax.swing.JButton btnFindAll;
     private javax.swing.JTextField descriptionField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
