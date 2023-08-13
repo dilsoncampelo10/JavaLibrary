@@ -8,7 +8,7 @@ import java.util.logging.Logger;
  *
  * @author dilson
  */
-public class ConnectionBD {
+public class ConnectionDB {
     private static final String url = "jdbc:mysql://localhost:3306/academy_library";
     private static final String user = "root";
     private static final String password = "";
@@ -20,7 +20,7 @@ public class ConnectionBD {
             conn = DriverManager.getConnection(url,user,password);
             return conn;
         } catch (SQLException ex) {
-            Logger.getLogger(ConnectionBD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectionDB.class.getName()).log(Level.SEVERE, null, ex);
              return null;
         }
       

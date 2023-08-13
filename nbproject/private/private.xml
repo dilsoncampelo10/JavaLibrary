@@ -7,10 +7,10 @@
             <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/entity/Address.java</file>
             <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/controllers/BookController.java</file>
             <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/entity/User.java</file>
+            <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/dao/ConnectionDB.java</file>
             <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/dao/BookDAO.java</file>
             <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/views/book/CreateBook.java</file>
             <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/entity/Book.java</file>
-            <file>file:/home/dilson/NetBeansProjects/JavaLibrary/src/javalibrary/dao/ConnectionBD.java</file>
         </group>
     </open-files>
 </project-private>

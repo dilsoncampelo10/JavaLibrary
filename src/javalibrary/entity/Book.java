@@ -22,6 +22,13 @@ public class Book {
         this.price = price;
         this.author = author;
     }
+    
+    public Book(String title, String description, Double price, String author) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.author = author;
+    }
 
     public Integer getId() {
         return id;
